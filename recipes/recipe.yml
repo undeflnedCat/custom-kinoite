@@ -24,9 +24,7 @@ modules:
         - mangohud
         - gamescope
         - zsh
-        - google-droid-sans-fonts
-        - google-droid-serif-fonts
-        - google-droid-sans-mono-fonts
+        - google-droid-fonts-all
 
   - type: script
     scripts:
