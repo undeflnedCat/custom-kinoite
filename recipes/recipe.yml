@@ -19,12 +19,22 @@ modules:
 
   - type: dnf
     repos:
+      rpmfusion: true
       copr:
         - atim/starship
     install:
       packages:
         - micro
         - starship
+        - fastfetch
+        - steam
+        - gamemode
+        - mangohud
+        - gamescope
+        - zsh
+        - google-droid-sans-fonts
+        - google-droid-serif-fonts
+        - google-droid-sans-mono-fonts
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -41,5 +51,9 @@ modules:
           - org.mozilla.firefox
           - org.gnome.Loupe
       - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: script
+    scripts:
+      - set-default-shell.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
