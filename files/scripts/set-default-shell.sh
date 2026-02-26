@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -oue pipefail
 
-# Set Zsh as the default shell for new users
+# set zsh as the default shell for new users
 useradd -D -s /bin/zsh
+
+# also set the default terminal theme
+echo 'eval "$(starship init zsh)"' >> /etc/zshrc

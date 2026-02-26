@@ -17,10 +17,7 @@ modules:
     install:
       packages:
         - micro
-        - starship
         - fastfetch
-        - steam
-        - gamemode
         - mangohud
         - gamescope
         - zsh
@@ -30,5 +27,10 @@ modules:
     scripts:
       - set-default-shell.sh
       - install-droid-sans-mono-nerd.sh
+
+  - type: containerfile
+    snippets:
+      - RUN curl -sS https://starship.rs/install.sh | sh -s -- -y -b /usr/bin
+      - RUN dnf5 -y install --setopt=install_weak_deps=False --best --allowerasing steam
 
   - type: signing

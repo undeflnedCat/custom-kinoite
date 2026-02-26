@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -oue pipefail
 
 # Create a clean temp space
 TMPDIR=$(mktemp -d)
